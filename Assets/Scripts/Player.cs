@@ -15,10 +15,15 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float rotation = Input.GetAxis("Horizontal") * rotationSpeed;
+        transform.Rotate(0, 0, -rotation * Time.deltaTime);
+
         float translation = Input.GetAxis("Vertical") * movementSpeed;
         transform.Translate(0, translation*Time.deltaTime, 0);
 
-        float rotation = Input.GetAxis("Horizontal") * rotationSpeed;
-        transform.Rotate(0, 0, -rotation*Time.deltaTime);
+        var newPos = transform.position;
+        newPos.x = Mathf.Clamp(newPos.x, -9, 9);
+        newPos.y = Mathf.Clamp(newPos.y, -5, 5);
+        transform.position = newPos;
     }
 }
