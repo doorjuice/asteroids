@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Math = System.Math;
 using UnityEngine;
 
 public class Asteroid : MonoBehaviour
@@ -23,13 +22,13 @@ public class Asteroid : MonoBehaviour
         transform.Rotate(rotation, rotationSpeed * Time.deltaTime);
         transform.position += translation * Time.deltaTime;
 
-        if (Math.Abs(transform.position.x) > 9f)
+        if (Mathf.Abs(transform.position.x) > 9f)
         {
             var newPos = transform.position;
             newPos.x = -transform.position.x;
             transform.position = newPos;
         }
-        if (Math.Abs(transform.position.y) > 5f)
+        if (Mathf.Abs(transform.position.y) > 5f)
         {
             var newPos = transform.position;
             newPos.y = -transform.position.y;
