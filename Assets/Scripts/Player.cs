@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
         transform.Rotate(0, 0, -rotation * Time.deltaTime);
 
         float translation = Input.GetAxis("Vertical") * movementSpeed;
-        transform.Translate(0, translation*Time.deltaTime, 0);
+        transform.Translate(0, translation*Time.deltaTime, 0, Space.Self);
 
         var newPos = transform.position;
         newPos.x = Mathf.Clamp(newPos.x, -9, 9);
