@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
 {
     public float movementSpeed = 5f, rotationSpeed = 150f;
 
+    public GameObject missile, canon;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,5 +27,10 @@ public class Player : MonoBehaviour
         newPos.x = Mathf.Clamp(newPos.x, -9, 9);
         newPos.y = Mathf.Clamp(newPos.y, -5, 5);
         transform.position = newPos;
+
+        if (Input.GetKeyDown("space"))
+        {
+            Instantiate(missile, canon.transform.position, canon.transform.rotation);
+        }
     }
 }

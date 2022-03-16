@@ -545,8 +545,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5069349101803621208, guid: f6509609e0a31f24a93244a1a6fa27cf, type: 3}
+      propertyPath: canon
+      value: 
+      objectReference: {fileID: 5064206125591042139}
+    - target: {fileID: 5069349101803621208, guid: f6509609e0a31f24a93244a1a6fa27cf, type: 3}
+      propertyPath: missile
+      value: 
+      objectReference: {fileID: 2735180690616760460, guid: 556ed05b0c06cff47809c6e21e7802df, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6509609e0a31f24a93244a1a6fa27cf, type: 3}
+--- !u!1 &5064206125591042139 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8766659299930842718, guid: f6509609e0a31f24a93244a1a6fa27cf, type: 3}
+  m_PrefabInstance: {fileID: 5064206125591042138}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5959142091192580898
 PrefabInstance:
   m_ObjectHideFlags: 0
