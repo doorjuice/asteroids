@@ -28,8 +28,6 @@ public class Missile : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log(other.name);
-        Instantiate(explosion);
+        Instantiate(explosion, other.transform);
     }
-
-
 }
