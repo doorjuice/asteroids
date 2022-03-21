@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5800678546975788619}
   - component: {fileID: 512148129514465728}
   - component: {fileID: 8463829657953993224}
-  - component: {fileID: 5918623430250808843}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -82,19 +81,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5918623430250808843
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 636970585137486371}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4726439455752321620
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,7 +92,6 @@ GameObject:
   - component: {fileID: 2306478048708939826}
   - component: {fileID: 6601751388255822741}
   - component: {fileID: 5391639751469970273}
-  - component: {fileID: 361930707351515057}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -177,19 +162,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &361930707351515057
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4726439455752321620}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5795041691942739953
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,6 +173,7 @@ GameObject:
   - component: {fileID: 7871942904374219802}
   - component: {fileID: 281399215140782022}
   - component: {fileID: 4327953891386839960}
+  - component: {fileID: 2653620943547848323}
   m_Layer: 0
   m_Name: AsteroidMedium
   m_TagString: Untagged
@@ -252,10 +225,23 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!135 &2653620943547848323
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5795041691942739953}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6339538412545234183
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,7 +253,6 @@ GameObject:
   - component: {fileID: 3845869433139000984}
   - component: {fileID: 411305859813975772}
   - component: {fileID: 6557637129113479543}
-  - component: {fileID: 3541601034151793374}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -338,19 +323,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3541601034151793374
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6339538412545234183}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7421715041932503573
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,7 +334,6 @@ GameObject:
   - component: {fileID: 7605846894953378780}
   - component: {fileID: 756658348440300613}
   - component: {fileID: 5312636329037969071}
-  - component: {fileID: 8514494802701576557}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -433,16 +404,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &8514494802701576557
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7421715041932503573}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}

@@ -35,4 +35,9 @@ public class Asteroid : MonoBehaviour
             transform.position = newPos;
         }
     }
+
+    void Explode()
+    {
+        Instantiate(GetComponent("Asteroid"), transform.position, transform.rotation);
+    }
 }

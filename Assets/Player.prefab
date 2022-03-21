@@ -105,9 +105,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4327571385245892246}
   - component: {fileID: 5069349101803621208}
+  - component: {fileID: 7137151276243688556}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145,8 +146,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 5
   rotationSpeed: 150
-  missile: {fileID: 0}
-  canon: {fileID: 0}
+  missile: {fileID: 2735180690616760460, guid: 556ed05b0c06cff47809c6e21e7802df, type: 3}
+  canon: {fileID: 8766659299930842718}
+  explosion: {fileID: 8003986732107205662, guid: 6a2d63b157353f44f85c32a27400f861, type: 3}
+--- !u!64 &7137151276243688556
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520264310067943007}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &3267114266942054005
 GameObject:
   m_ObjectHideFlags: 0

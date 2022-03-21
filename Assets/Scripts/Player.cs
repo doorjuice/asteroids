@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     public float movementSpeed = 5f, rotationSpeed = 150f;
 
     public GameObject missile, canon;
+    public GameObject explosion;
 
     // Start is called before the first frame update
     void Start()
@@ -32,5 +33,12 @@ public class Player : MonoBehaviour
         {
             Instantiate(missile, canon.transform.position, canon.transform.rotation);
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Instantiate(explosion, other.transform.position, other.transform.rotation);
+        Destroy(gameObject);
+        Destroy(other.gameObject);
     }
 }
