@@ -440,6 +440,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Asteroid2
       objectReference: {fileID: 0}
+    - target: {fileID: 5795041691942739953, guid: 9a3b2dd607716994091a0fa5495a58a0, type: 3}
+      propertyPath: m_TagString
+      value: Asteroid
+      objectReference: {fileID: 0}
     - target: {fileID: 7421715041932503573, guid: 9a3b2dd607716994091a0fa5495a58a0, type: 3}
       propertyPath: m_Name
       value: Sphere
@@ -578,6 +582,10 @@ PrefabInstance:
     - target: {fileID: 5959142091829657992, guid: a48b6d52e912ed64c8acdc2ebc2195e0, type: 3}
       propertyPath: m_Name
       value: Asteroid1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5959142091829657992, guid: a48b6d52e912ed64c8acdc2ebc2195e0, type: 3}
+      propertyPath: m_TagString
+      value: Asteroid
       objectReference: {fileID: 0}
     - target: {fileID: 5959142091829657993, guid: a48b6d52e912ed64c8acdc2ebc2195e0, type: 3}
       propertyPath: m_RootOrder

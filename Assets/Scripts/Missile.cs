@@ -27,12 +27,9 @@ public class Missile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Instantiate(explosion, other.transform.position, other.transform.rotation);
         Destroy(gameObject);
-
+        Instantiate(explosion, other.transform.position, other.transform.rotation);
         if (other.tag == "Asteroid")
-            ((Asteroid)other.gameObject).Explode();
-        Destroy(other.gameObject);
-
+            other.transform.GetComponent<Asteroid>()?.Explode();
     }
 }

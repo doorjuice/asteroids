@@ -36,8 +36,10 @@ public class Asteroid : MonoBehaviour
         }
     }
 
-    void Explode()
+    public void Explode()
     {
-        Instantiate(GetComponent("Asteroid"), transform.position, transform.rotation);
+        //Instantiate(GetComponent("Asteroid"), transform.position, transform.rotation);
+        Debug.Log("Boom!");
+        Destroy(gameObject);
     }
 }
