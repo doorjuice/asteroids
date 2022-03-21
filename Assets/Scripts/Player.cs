@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     public float movementSpeed = 5f, rotationSpeed = 150f;
 
     public GameObject missile, canon;
+    public GameObject explosion;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,7 @@ public class Player : MonoBehaviour
         transform.Rotate(0, 0, -rotation * Time.deltaTime);
 
         float translation = Input.GetAxis("Vertical") * movementSpeed;
-        transform.Translate(0, translation*Time.deltaTime, 0);
+        transform.Translate(0, translation*Time.deltaTime, 0, Space.Self);
 
         var newPos = transform.position;
         newPos.x = Mathf.Clamp(newPos.x, -9, 9);
@@ -32,5 +33,12 @@ public class Player : MonoBehaviour
         {
             Instantiate(missile, canon.transform.position, canon.transform.rotation);
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Instantiate(explosion, other.transform.position, other.transform.rotation);
+        Destroy(gameObject);
+        Destroy(other.gameObject);
     }
 }

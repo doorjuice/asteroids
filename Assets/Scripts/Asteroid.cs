@@ -13,14 +13,14 @@ public class Asteroid : MonoBehaviour
     void Start()
     {
         rotation = new Vector3(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
-        translation = new Vector3(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
+        translation = new Vector3(Random.Range(0f, 1f), Random.Range(0f, 1f), 0f);
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.Rotate(rotation, rotationSpeed * Time.deltaTime);
-        transform.position += translation * Time.deltaTime;
+        transform.position += translation * Time.deltaTime; //equivalent à transform.Translate(translation * Time.deltaTime, Space.World);
 
         if (Mathf.Abs(transform.position.x) > 9f)
         {
@@ -34,5 +34,10 @@ public class Asteroid : MonoBehaviour
             newPos.y = -transform.position.y;
             transform.position = newPos;
         }
+    }
+
+    void Explode()
+    {
+        Instantiate(GetComponent("Asteroid"), transform.position, transform.rotation);
     }
 }
