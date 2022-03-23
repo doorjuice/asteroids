@@ -8,7 +8,6 @@ public class Asteroid : MonoBehaviour
     public float movementSpeed = 0.5f;
 
     public int nbPoints = 1;
-    public GameObject scoreManager;
 
     private Vector3 rotation, translation;
 
@@ -42,7 +41,8 @@ public class Asteroid : MonoBehaviour
     public void Explode()
     {
         //Instantiate(GetComponent("Asteroid"), transform.position, transform.rotation);
-        scoreManager.GetComponent<ScoreManager>().AddScore();
+        //scoreManager.GetComponent<ScoreManager>().AddScore();
+        ScoreManager.AddScore();
         Destroy(gameObject);
     }
 }
