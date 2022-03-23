@@ -212,9 +212,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 60
-  movementSpeed: 0.5
-  nbPoints: 1
-  scoreManager: {fileID: 7202233308018760840, guid: 0621f079f4b404c408738bc220b5ddb8, type: 3}
+  movementSpeed: 0.8
+  nbPoints: 2
 --- !u!54 &4327953891386839960
 Rigidbody:
   m_ObjectHideFlags: 0
