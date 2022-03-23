@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -16,6 +15,12 @@ public class ScoreManager : MonoBehaviour
             Destroy(this.gameObject);
         else
             _instance = this;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.Escape))
+            SceneManager.LoadScene("MenuScene");
     }
 
     public void AddScore(int inc = 1)

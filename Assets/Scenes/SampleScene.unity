@@ -308,7 +308,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 281399215140782022, guid: 9a3b2dd607716994091a0fa5495a58a0, type: 3}
       propertyPath: movementSpeed
-      value: 0.5
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4327953891386839960, guid: 9a3b2dd607716994091a0fa5495a58a0, type: 3}
       propertyPath: m_UseGravity
@@ -377,7 +377,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 281399215140782022, guid: 9a3b2dd607716994091a0fa5495a58a0, type: 3}
       propertyPath: movementSpeed
-      value: 0.5
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 2653620943547848323, guid: 9a3b2dd607716994091a0fa5495a58a0, type: 3}
       propertyPath: m_Enabled
@@ -450,7 +450,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 281399215140782022, guid: 9a3b2dd607716994091a0fa5495a58a0, type: 3}
       propertyPath: movementSpeed
-      value: 0.5
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 810900160045649704, guid: 9a3b2dd607716994091a0fa5495a58a0, type: 3}
       propertyPath: m_Name
