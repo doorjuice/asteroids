@@ -132,6 +132,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 60
   movementSpeed: 0.5
+  nbPoints: 1
+  scoreManager: {fileID: 7202233308018760840, guid: 0621f079f4b404c408738bc220b5ddb8, type: 3}
 --- !u!135 &4099382571594222492
 SphereCollider:
   m_ObjectHideFlags: 0
