@@ -35,5 +35,9 @@ public class Missile : MonoBehaviour
             //if (asteroid != null)
             //    asteroid.Explode();
         }
+        else if (other.CompareTag("Player"))
+        {
+            other.transform.GetComponent<Player>()?.Explode();
+        }
     }
 }
