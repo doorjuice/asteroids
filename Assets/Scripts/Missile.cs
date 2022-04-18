@@ -39,7 +39,7 @@ public class Missile : MonoBehaviour
             {
                 if (other.transform.parent.gameObject.CompareTag("Player"))
                 {
-                    other.transform.GetComponent<Player>()?.Explode();
+                    other.transform.parent.gameObject.GetComponent<Player>()?.Explode();
                     Destroy(other.transform.parent.gameObject);
                 }
             }
@@ -48,7 +48,7 @@ public class Missile : MonoBehaviour
                 if (other.CompareTag("Player"))
                 {
                     other.transform.GetComponent<Player>()?.Explode();
-                    Destroy(other.transform.parent.gameObject);
+                    Destroy(other.gameObject);
                 }
             }
         }
