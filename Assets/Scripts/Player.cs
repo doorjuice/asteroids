@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
 
     public GameObject missile, canon;
     public GameObject explosion;
+    public GameObject messageDeath;
 
     // Start is called before the first frame update
     void Start()
@@ -40,5 +41,6 @@ public class Player : MonoBehaviour
         //Instantiate(explosion, other.transform.position, other.transform.rotation);
         Destroy(gameObject);
         Destroy(other.gameObject);
+        Time.timeScale = 0;
     }
 }
