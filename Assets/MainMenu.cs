@@ -5,9 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public void NewGame()
+
+    void Update()
     {
-        SceneManager.LoadScene("SampleScene");
+        if (Input.GetKeyDown("space"))
+        {
+            SceneManager.LoadScene("SampleScene");
+        }
     }
 }
