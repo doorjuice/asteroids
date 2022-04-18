@@ -8,6 +8,7 @@ TagManager:
   - Asteroid
   - Tirailleur
   - Brigand
+  - missile
   layers:
   - Default
   - TransparentFX

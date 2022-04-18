@@ -221,6 +221,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1520264310067943007, guid: f6509609e0a31f24a93244a1a6fa27cf, type: 3}
   m_PrefabInstance: {fileID: 5064206125591042138}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &427003377
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427003376}
+  serializedVersion: 2
+  m_Mass: 2
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,7 +440,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1095015082}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.59, y: 0.12, z: 0}
+  m_LocalPosition: {x: 3.07, y: -3.41, z: 0}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children:
   - {fileID: 1731009277}
@@ -895,6 +911,7 @@ GameObject:
   - component: {fileID: 2042474817}
   - component: {fileID: 2042474816}
   - component: {fileID: 2042474815}
+  - component: {fileID: 2042474820}
   m_Layer: 0
   m_Name: vaisseauBrigand
   m_TagString: Brigand
@@ -972,7 +989,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2042474814}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.75, y: -1.9, z: 0}
+  m_LocalPosition: {x: 6.83, y: 3.86, z: 0}
   m_LocalScale: {x: 1.577, y: 1.5049, z: 1}
   m_Children:
   - {fileID: 1226122163}
@@ -991,6 +1008,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2046f4678da925449b167f8070a85da8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distanceMinimum: 0
+  vitesseRotation: 40
+  vitesseMouvement: 5
+  explosion: {fileID: 8003986732107205662, guid: 6a2d63b157353f44f85c32a27400f861, type: 3}
+  playerObj: {fileID: 427003376}
+--- !u!54 &2042474820
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042474814}
+  serializedVersion: 2
+  m_Mass: 2
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &3960238469707377975
 PrefabInstance:
   m_ObjectHideFlags: 0
