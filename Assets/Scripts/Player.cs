@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Player : MonoBehaviour
 
     public GameObject missile, canon;
     public GameObject explosion;
+    public GameObject messageDeath;
 
     // Start is called before the first frame update
     void Start()
@@ -37,8 +39,19 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //Instantiate(explosion, other.transform.position, other.transform.rotation);
+        if (other.CompareTag("Brigand"))
+        {
+            Destroy(gameObject);
+            Destroy(other.gameObject);
+            Time.timeScale = 0;
+        }
+    }
+
+    public void Explode()
+    {
         Destroy(gameObject);
-        Destroy(other.gameObject);
+        Time.timeScale = 0;
+
+        SceneManager.LoadScene("MenuScene");
     }
 }

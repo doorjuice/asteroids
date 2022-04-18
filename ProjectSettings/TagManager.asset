@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Destructible
   - Asteroid
+  - Tirailleur
+  - Brigand
+  - missile
   layers:
   - Default
   - TransparentFX

@@ -11,7 +11,7 @@ public class Missile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -27,15 +27,30 @@ public class Missile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Destroy(gameObject); // Detruire le missile
+        Instantiate(explosion, other.transform.position, other.transform.rotation); // Creer une explosion
         if (other.CompareTag("Asteroid"))
         {
-            Destroy(gameObject); // Detruire le missile
-            Instantiate(explosion, other.transform.position, other.transform.rotation); // Creer une explosion
-
-            other.transform.GetComponent<Asteroid>()?.Explode(); // Est equivalent a:
-            //var asteroid = other.transform.GetComponent<Asteroid>();
-            //if (asteroid != null)
-            //    asteroid.Explode();
+            other.transform.GetComponent<Asteroid>()?.Explode();
+        }
+        else
+        {
+            if (other.transform.parent)
+            {
+                if (other.transform.parent.gameObject.CompareTag("Player"))
+                {
+                    other.transform.GetComponent<Player>()?.Explode();
+                    Destroy(other.transform.parent.gameObject);
+                }
+            }
+            else
+            {
+                if (other.CompareTag("Player"))
+                {
+                    other.transform.GetComponent<Player>()?.Explode();
+                    Destroy(other.transform.parent.gameObject);
+                }
+            }
         }
     }
 }
