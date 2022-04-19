@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     public GameObject explosion;
     public GameObject messageDeath;
 
+    public GameObject bonusVies;
+
     public float temps = 30f;
 
     // Start is called before the first frame update
@@ -44,6 +46,10 @@ public class Player : MonoBehaviour
         if (temps < 0)
         {
             SceneManager.LoadScene("MenuScene");
+        }
+        if (temps < 25f)
+        {
+            Instantiate(bonusVies);
         }
     }
 

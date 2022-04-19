@@ -111,3 +111,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 5
   explosion: {fileID: 8003986732107205662, guid: 6a2d63b157353f44f85c32a27400f861, type: 3}
+  vBrigand: {fileID: 0}
