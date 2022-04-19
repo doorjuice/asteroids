@@ -41,9 +41,24 @@ public class Player : MonoBehaviour
     {
         if (other.CompareTag("Brigand"))
         {
+            Instantiate(gameObject, transform.position, transform.rotation);
             Destroy(gameObject);
             Destroy(other.gameObject);
             Time.timeScale = 0;
+
+            SceneManager.LoadScene("MenuScene");
+        }
+        else if (other.transform.parent)
+        {
+            if (other.transform.parent.gameObject.CompareTag("Brigand"))
+            {
+                Instantiate(gameObject, transform.position, transform.rotation);
+                Destroy(gameObject);
+                Destroy(other.gameObject);
+                Time.timeScale = 0;
+
+                SceneManager.LoadScene("MenuScene");
+            }
         }
     }
 

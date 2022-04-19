@@ -7,11 +7,12 @@ public class Missile : MonoBehaviour
     public float movementSpeed = 5f;
 
     public GameObject explosion;
+    public vaisseauBrigand vBrigand;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        vBrigand = FindObjectOfType<vaisseauBrigand>();
     }
 
     // Update is called once per frame
@@ -29,27 +30,34 @@ public class Missile : MonoBehaviour
     {
         Destroy(gameObject); // Detruire le missile
         Instantiate(explosion, other.transform.position, other.transform.rotation); // Creer une explosion
+
         if (other.CompareTag("Asteroid"))
         {
             other.transform.GetComponent<Asteroid>()?.Explode();
         }
-        else
+          else if (other.CompareTag("Brigand"))
         {
-            if (other.transform.parent)
+            other.transform.GetComponent<vaisseauBrigand>()?.Explode();
+        }
+        else if (other.CompareTag("Player"))
+        {
+            other.transform.GetComponent<Player>()?.Explode();
+            Destroy(other.gameObject);
+        }
+        else if (other.transform.parent)
+        {
+            if (other.transform.parent.gameObject.CompareTag("Brigand"))
             {
-                if (other.transform.parent.gameObject.CompareTag("Player"))
+                other.transform.parent.gameObject.GetComponent<vaisseauBrigand>()?.Explode();
+                if (!vBrigand.isAlive())
                 {
-                    other.transform.parent.gameObject.GetComponent<Player>()?.Explode();
                     Destroy(other.transform.parent.gameObject);
                 }
             }
-            else
+            else if (other.transform.parent.gameObject.CompareTag("Player"))
             {
-                if (other.CompareTag("Player"))
-                {
-                    other.transform.GetComponent<Player>()?.Explode();
-                    Destroy(other.gameObject);
-                }
+                other.transform.parent.gameObject.GetComponent<Player>()?.Explode();
+                Destroy(other.transform.parent.gameObject);
             }
         }
     }

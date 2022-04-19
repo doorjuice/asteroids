@@ -16,6 +16,8 @@ public class vaisseauBrigand : MonoBehaviour
     public GameObject playerObj;
     private Vector3 rotation;
 
+    public int vies = 3;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -65,13 +67,42 @@ public class vaisseauBrigand : MonoBehaviour
         }
     }
 
+    public void LoseLife()
+    {
+        if (isAlive())
+        {
+            vies--;
+            Debug.Log($"[Brigand] You lost a life, remaining: {vies}");
+        }
+    }
+
+    public bool isAlive()
+    {
+        return vies > 0;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Asteroid"))
         {
+            LoseLife();
+            if (!isAlive())
+            {
+                Instantiate(gameObject, transform.position, transform.rotation);
+                Destroy(gameObject);
+                Destroy(other.gameObject);
+                Debug.Log($"[Brigand] Your dead");
+            }
+        }
+    }
+
+    public void Explode()
+    {
+        LoseLife();
+        if (!isAlive())
+        {
             Destroy(gameObject);
-            Destroy(other.gameObject);
-            Time.timeScale = 0;
+            Debug.Log($"[Brigand] Your dead");
         }
     }
 }

@@ -26,8 +26,6 @@ public class ScoreManager : MonoBehaviour
     public void AddScore(int inc = 1)
     {
         score += inc;
-        Debug.Log($"Score: {score} (+{inc})"); // Equivalent a Debug.Log("Score: " + score + "(+" + inc + ")");
+        Debug.Log($"Score: {score} (+{inc})");
     }
-
-    //TODO Arreter la partie quand il n'y a plus d'asteroides.
 }
