@@ -47,10 +47,7 @@ public class Player : MonoBehaviour
         {
             SceneManager.LoadScene("MenuScene");
         }
-        if (temps < 25f)
-        {
-            Instantiate(bonusVies);
-        }
+        Instantiate(bonusVies);
     }
 
     private void OnTriggerEnter(Collider other)

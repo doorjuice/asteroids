@@ -39,7 +39,6 @@ public class BonusVies : MonoBehaviour
         }
 
         tempsApparition -= Time.deltaTime;
-        Debug.Log($"Life time set at 10, remaining: {tempsApparition}");
         if (tempsApparition <= 0)
         {
             Destroy(gameObject);
