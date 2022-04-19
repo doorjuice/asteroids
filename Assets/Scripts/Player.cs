@@ -15,6 +15,9 @@ public class Player : MonoBehaviour
 
     public float temps = 30f;
 
+    private float timer = 0.0f;
+    private float waitTime = 1f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +27,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        timer += Time.deltaTime;
 
         float rotation = Input.GetAxis("Horizontal") * rotationSpeed;
         transform.Rotate(0, 0, -rotation * Time.deltaTime);
@@ -43,11 +48,23 @@ public class Player : MonoBehaviour
 
         temps -= Time.deltaTime;
         Debug.Log($"Life time set at 30, remaining: {temps}");
-        if (temps < 0)
+        if (temps <= 0)
         {
             SceneManager.LoadScene("MenuScene");
         }
-        Instantiate(bonusVies);
+
+        if (timer > waitTime)
+        {
+
+            timer = timer - waitTime;
+
+            Instantiate(bonusVies);
+        }
+    }
+
+    public void AddTime()
+    {
+        temps++;
     }
 
     private void OnTriggerEnter(Collider other)

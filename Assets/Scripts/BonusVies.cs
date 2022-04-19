@@ -12,9 +12,12 @@ public class BonusVies : MonoBehaviour
 
     public Player player;
 
+    public int temps = 0;
+
     // Start is called before the first frame update
     void Start()
     {
+        player = FindObjectOfType<Player>();
         rotation = new Vector3(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
         translation = new Vector3(Random.Range(0f, 1f), Random.Range(0f, 1f), 0f);
     }
@@ -47,9 +50,17 @@ public class BonusVies : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
         if (other.CompareTag("Player"))
         {
-            player.temps++;
+            temps++;
+        }
+        else if (other.transform.parent)
+        {
+            if (other.transform.parent.gameObject.CompareTag("Player"))
+            {
+                temps++;
+            }
         }
     }
 }

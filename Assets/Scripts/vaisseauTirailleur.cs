@@ -10,7 +10,6 @@ public class vaisseauTirailleur : MonoBehaviour
 
     private float timer = 0.0f;
     private float waitTime = 1f;
-    private float visualTime = 0.0f;
 
     public GameObject missile, canon;
     public GameObject explosion;
@@ -67,7 +66,6 @@ public class vaisseauTirailleur : MonoBehaviour
 
         if (timer > waitTime)
         {
-            visualTime = timer;
 
             timer = timer - waitTime;
 

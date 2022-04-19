@@ -277,6 +277,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  maxZoom: 125
+  minZoom: 2
+  incZoom: 2
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -509,16 +512,24 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1565943731512517064, guid: 9738d6133f488b746bb247d0a4ea434d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1565943731512517064, guid: 9738d6133f488b746bb247d0a4ea434d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1565943731512517064, guid: 9738d6133f488b746bb247d0a4ea434d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.94
+      value: -8.58
       objectReference: {fileID: 0}
     - target: {fileID: 1565943731512517064, guid: 9738d6133f488b746bb247d0a4ea434d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.34
+      value: 0.69
       objectReference: {fileID: 0}
     - target: {fileID: 1565943731512517064, guid: 9738d6133f488b746bb247d0a4ea434d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 12.59
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1565943731512517064, guid: 9738d6133f488b746bb247d0a4ea434d, type: 3}
       propertyPath: m_LocalRotation.w
