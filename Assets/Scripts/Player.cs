@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     public GameObject explosion;
     public GameObject messageDeath;
 
+    public float temps = 30f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         float rotation = Input.GetAxis("Horizontal") * rotationSpeed;
         transform.Rotate(0, 0, -rotation * Time.deltaTime);
 
@@ -34,6 +37,13 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown("space"))
         {
             Instantiate(missile, canon.transform.position, canon.transform.rotation);
+        }
+
+        temps -= Time.deltaTime;
+        Debug.Log($"Life time set at 30, remaining: {temps}");
+        if (temps < 0)
+        {
+            SceneManager.LoadScene("MenuScene");
         }
     }
 
